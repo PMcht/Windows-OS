@@ -1,0 +1,78 @@
+/* COLORS */
+$darkblue: #2b1fd2;
+$darkblue1: #300cc8;
+$bluebg: #3139fb;
+$purple: #a79add;
+
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* TEXT */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+
+.text-big{
+  font-size: 8rem;
+  line-height: 5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  
+}
+.text-bigger{
+  font-size: 11rem;
+  line-height: 9rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+.size2{
+  font-size: 1.5rem
+}
+.size3{
+  font-size: 5rem;
+}
+
+.text-white{
+  color: #fff
+}
+.text-darkblue{
+  color: $darkblue
+}
+.text-darkblue1{
+  color: $darkblue1
+}
+.text-purple{
+  color: $purple
+}
+.bold{
+  font-weight: bold;
+}
+
+
+/* POSITION */
+.flex{
+  display: flex;
+  & .verticalCenter{
+    align-items: center;
+  }
+  &.horizontalCenter{
+    justify-content: center;
+  }
+  &.column{
+    flex-direction: column;
+  }
+}

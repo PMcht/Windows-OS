@@ -5,7 +5,7 @@ import Tracking from '../../Hooks/Draggable'
 const Shortcut = () => {
 
   return (
-    <div className='shortcut flex verticalCenter horizontalCenter column draggable'>
+    <div className='shortcut flex verticalCenter horizontalCenter column draggable open'>
 
         <img src='\W11\Folder.png' className='icon ' />
 

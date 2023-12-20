@@ -6,5 +6,9 @@
     height: 100vh;
     background-color: $bluebg;
     text-align: center;
+    position: relative;
+    * {
+        user-select: none;
+    }
 }
 

@@ -1,26 +1,34 @@
 import React, { useEffect } from 'react'
+import About from '../Sections/About/About';
 
 function Tracking(id) {
 
     useEffect(() => {
 
-        var offset = [0,0];
+        var offset = [0,0]; //So that icon does not jump to top right
 
-        let test = 0
+        let dragTrigger = document.querySelectorAll(".dragTrigger")
+        let draggableItems = document.querySelectorAll(".draggable")
+        let target = 0
 
         function mouseMoveWhilstDown(whileMove) {
+
+            //Remove listeners when click ends
             var endMove = function () {
                 window.removeEventListener('mousemove', whileMove);
                 window.removeEventListener('mouseup', endMove);
             };
             
-            document.querySelectorAll(".draggable").forEach(el => {
+            //When click is held
+            dragTrigger.forEach(el => {
                 el.addEventListener('mousedown', function (e) {
+                    //Get closest object to drag
+                    let toDrag = el.closest(".draggable")
                     offset = [
-                        el.offsetLeft - e.clientX,
-                        el.offsetTop - e.clientY
+                        toDrag.offsetLeft - e.clientX,
+                        toDrag.offsetTop - e.clientY
                     ];
-                    test = el
+                    target = toDrag
                     e.stopPropagation(); // remove if you do want it to propagate ..
                     window.addEventListener('mousemove', whileMove);
                     window.addEventListener('mouseup', endMove);   
@@ -28,22 +36,26 @@ function Tracking(id) {
             });
         }
 
-
+        //Action when drag happens
         mouseMoveWhilstDown(
             function (e) { 
 
-                console.log('test')
+                draggableItems.forEach(el => el.style.zIndex = 1)
+
                 const height = Math.min(Math.max(parseInt(e.clientY +offset[1]), 0), window.innerHeight -90)
                 const width =  Math.min(Math.max(parseInt(e.clientX + offset[0]), 0), window.innerWidth -80)
 
-                test.style.top = height + "px";
-                test.style.left = width + "px";
+                target.style.top = height + "px";
+                target.style.left = width + "px";
+                target.style.zIndex = 2
              }
         );
 
+        //Double Click
         document.querySelectorAll('.open').forEach(el => {
             el.addEventListener("dblclick", (e) => {
-                console.log('dbclicked')
+                let attribute = document.getElementById(el.getAttribute('data-open'));
+                attribute.classList.toggle('show')
             });
         })
 

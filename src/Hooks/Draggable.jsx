@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import About from '../Sections/About/About';
 
-function Tracking(id) {
+function Tracking() {
 
     useEffect(() => {
 
@@ -42,8 +42,8 @@ function Tracking(id) {
 
                 draggableItems.forEach(el => el.style.zIndex = 1)
 
-                const height = Math.min(Math.max(parseInt(e.clientY +offset[1]), 0), window.innerHeight -90)
-                const width =  Math.min(Math.max(parseInt(e.clientX + offset[0]), 0), window.innerWidth -80)
+                const height = Math.min(Math.max(parseInt(e.clientY +offset[1]), 0), window.innerHeight - target.clientHeight)
+                const width =  Math.min(Math.max(parseInt(e.clientX + offset[0]), 0), window.innerWidth - target.clientWidth)
 
                 target.style.top = height + "px";
                 target.style.left = width + "px";
@@ -55,7 +55,15 @@ function Tracking(id) {
         document.querySelectorAll('.open').forEach(el => {
             el.addEventListener("dblclick", (e) => {
                 let attribute = document.getElementById(el.getAttribute('data-open'));
-                attribute.classList.toggle('show')
+                attribute.classList.add('active')
+            });
+        })
+
+        //Closing
+        document.querySelectorAll('.close').forEach(el => {
+            el.addEventListener("click", (e) => {
+                let attribute = document.getElementById(el.getAttribute('data-close'));
+                attribute.classList.remove('active')
             });
         })
 

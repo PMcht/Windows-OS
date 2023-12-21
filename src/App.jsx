@@ -4,10 +4,11 @@ import Tracking from './Hooks/Draggable';
 import Shortcuts from './Components/Shortcuts/Shortcut';
 import About from './Sections/About/About';
 import Counter from './Components/Counter/Counter';
+import Windows from './Components/Windows/Windows';
 
 function App() {
 
-  Tracking('TrackItem');
+  Tracking();
 
   return (
     <div id="hero" className='flex verticalCenter horizontalCenter column'>
@@ -20,8 +21,7 @@ function App() {
 
 
             <Shortcuts />
-            <About />
-
+            <Windows />
 
             
     </div>

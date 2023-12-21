@@ -6,7 +6,7 @@ import { ShortcutList } from './ShortcutList'
 const Shortcut = () => {
 
   const allShortcuts = ShortcutList.map((shortcut) =>
-      <div key={shortcut.id} data-open='About' className='shortcut flex verticalCenter horizontalCenter column draggable dragTrigger open'>
+      <div key={shortcut.id} data-open={shortcut.title} className='shortcut flex verticalCenter horizontalCenter column draggable dragTrigger open'>
 
         <img src={shortcut.img} className='icon' />
 

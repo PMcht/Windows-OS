@@ -3,10 +3,11 @@ import './About.scss'
 
 const About = () => {
   return (
-    <div id="About" className='About draggable'>
-        <p className='dragTrigger'>test</p>
-        <p >Close</p>
+
+    <div id="About">
+      <p>About</p>
     </div>
+    
   )
 }
 

@@ -63,9 +63,10 @@
     bottom: 0rem;
     right: 0rem;
 
-    width: 2rem;
-    height: 2rem;
-    background-color: red;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor:se-resize
   }
   .contentInWindow{
     padding: 20px 50px;

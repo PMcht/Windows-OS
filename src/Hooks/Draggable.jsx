@@ -51,22 +51,6 @@ function Tracking() {
              }
         );
 
-        //Double Click
-        document.querySelectorAll('.open').forEach(el => {
-            el.addEventListener("dblclick", (e) => {
-                let attribute = document.getElementById(el.getAttribute('data-open'));
-                attribute.classList.add('active')
-            });
-        })
-
-        //Closing
-        document.querySelectorAll('.close').forEach(el => {
-            el.addEventListener("click", (e) => {
-                let attribute = document.getElementById(el.getAttribute('data-close'));
-                attribute.classList.remove('active')
-            });
-        })
-
     })
 }        
 

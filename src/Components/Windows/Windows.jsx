@@ -11,8 +11,8 @@ const Windows = () => {
                 <div className='dragTrigger headerExplorer flex horizontalCenter verticalCenter '>
                     <div className='flex horizontalCenter verticalCenter dots'>
                         <div className='dot close' data-close={window.title} />
-                        <div className='dot close' data-close={window.title} />
-                        <div className='dot' />
+                        <div className='dot resizeSmall' data-resize={window.title} />
+                        <div className='dot resizeBig' data-resize={window.title}/>
                     </div>
                     <p className='explorerTitle'>{window.title}</p>
                 </div>

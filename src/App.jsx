@@ -5,10 +5,12 @@ import Shortcuts from './Components/Shortcuts/Shortcut';
 import About from './Sections/About/About';
 import Counter from './Components/Counter/Counter';
 import Windows from './Components/Windows/Windows';
+import Extend from './Hooks/Extend';
 
 function App() {
 
   Tracking();
+  Extend();
 
   return (
     <div id="hero" className='flex verticalCenter horizontalCenter column'>

@@ -1,4 +1,3 @@
-import React from 'react'
 import './windows.scss'
 import { ShortcutList } from '../Shortcuts/ShortcutList'
 

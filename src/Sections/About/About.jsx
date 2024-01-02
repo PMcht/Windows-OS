@@ -1,4 +1,3 @@
-import React from 'react'
 import './About.scss'
 
 const About = () => {
@@ -6,6 +5,23 @@ const About = () => {
 
     <div id="About">
       <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+      <p>About</p>
+
     </div>
     
   )
